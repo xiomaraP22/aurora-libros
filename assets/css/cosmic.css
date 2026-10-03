@@ -1,0 +1,90 @@
+/* Nébula Libros — tema cósmico juvenil */
+:root{--noche:#12061f;--noche2:#1d0b30;--panel:#241038;--arena:#E6A45B;--rosa:#F274A9;--violeta:#E362F0;--fuego:#EE4E21;--rubi:#AC2B45;--texto:#f6ecfb;--suave:#c9b3d9}
+html{scroll-behavior:smooth}
+body{font-family:'Figtree',sans-serif!important;color:var(--texto);background:var(--noche);position:relative;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background:
+radial-gradient(1.5px 1.5px at 12% 18%,#fff 99%,transparent),radial-gradient(1px 1px at 34% 72%,#fff 99%,transparent),
+radial-gradient(2px 2px at 58% 28%,var(--arena) 99%,transparent),radial-gradient(1px 1px at 81% 63%,#fff 99%,transparent),
+radial-gradient(1.5px 1.5px at 92% 12%,var(--rosa) 99%,transparent),radial-gradient(1px 1px at 22% 90%,#fff 99%,transparent),
+radial-gradient(1.5px 1.5px at 70% 88%,#fff 99%,transparent),radial-gradient(1px 1px at 47% 8%,#fff 99%,transparent),
+radial-gradient(60vw 50vh at 85% 0%,rgba(227,98,240,.28),transparent),radial-gradient(55vw 55vh at 0% 100%,rgba(238,78,33,.18),transparent),
+radial-gradient(40vw 40vh at 100% 80%,rgba(172,43,69,.25),transparent),var(--noche);animation:titilar 6s ease-in-out infinite alternate}
+@keyframes titilar{from{opacity:.85}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){body::before{animation:none}*{transition:none!important}}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.logo,.navbar-brand{font-family:'Unbounded',sans-serif!important;font-weight:600;letter-spacing:-.01em;color:var(--texto)}
+.h1,h1{line-height:1.15}
+p,li,span,label,.text-muted{color:var(--suave)!important}
+a{color:var(--arena)}a:hover{color:var(--rosa)}
+:focus-visible{outline:3px solid var(--violeta)!important;outline-offset:2px}
+/* colores de utilidades de bootstrap -> paleta */
+.text-success,.text-primary{color:var(--arena)!important}
+.text-dark{color:var(--texto)!important}.text-light{color:var(--texto)!important}
+.bg-light,.bg-white{background:transparent!important}
+.bg-dark,#tempaltemo_nav_top,footer.bg-dark{background:rgba(18,6,31,.92)!important}
+#tempaltemo_nav_top{background:linear-gradient(90deg,var(--rubi),var(--fuego),var(--arena))!important}
+#tempaltemo_nav_top a,#tempaltemo_nav_top i{color:#fff!important}
+.border-light,.border-bottom,.border{border-color:rgba(227,98,240,.25)!important}
+/* botones */
+.btn-success,.btn-primary{background:linear-gradient(135deg,var(--rosa),var(--violeta))!important;border:0!important;color:#1b0630!important;font-weight:700;border-radius:999px;padding:.6rem 1.4rem;box-shadow:0 6px 24px rgba(227,98,240,.35);transition:transform .2s,box-shadow .2s}
+.btn-success:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(242,116,169,.55);color:#1b0630!important}
+.btn-outline-success,.btn-secondary{border-color:var(--arena)!important;color:var(--arena)!important;border-radius:999px}
+/* navegación */
+.navbar{background:rgba(18,6,31,.8)!important;backdrop-filter:blur(10px);border-bottom:1px solid rgba(227,98,240,.25)}
+.navbar-brand{font-size:1.5rem!important;color:var(--arena)!important}
+.navbar-brand::before{content:"✦ ";color:var(--rosa)}
+.nav-link,.navbar .nav-icon,.navbar-light .navbar-nav .nav-link{color:var(--texto)!important;font-weight:600}
+.nav-link:hover,.navbar .nav-icon:hover{color:var(--rosa)!important}
+.navbar-toggler{border-color:var(--rosa)!important;background:var(--panel)}
+.navbar-toggler-icon{filter:invert(1)}
+.form-control{background:var(--panel);border:1px solid rgba(227,98,240,.4);color:var(--texto);border-radius:14px}
+.form-control::placeholder{color:#a98fc0}.form-control:focus{background:var(--panel);color:var(--texto);border-color:var(--violeta);box-shadow:0 0 0 .2rem rgba(227,98,240,.3)}
+.input-group-text{background:var(--violeta)!important;border:0;color:#1b0630}
+.modal-content{background:var(--noche2)}
+/* portada */
+#template-mo-zay-hero-carousel,.banner-section{background:transparent!important}
+#template-mo-zay-hero-carousel .carousel-item{background:radial-gradient(60% 80% at 25% 40%,rgba(238,78,33,.25),transparent),radial-gradient(50% 70% at 80% 50%,rgba(227,98,240,.3),transparent),var(--noche2)}
+#template-mo-zay-hero-carousel .carousel-item img{max-height:420px;width:auto!important;margin:auto;border-radius:10px;box-shadow:0 0 60px rgba(227,98,240,.55),0 20px 40px rgba(0,0,0,.6);transform:rotate(-3deg)}
+#template-mo-zay-hero-carousel .h1{font-size:clamp(1.8rem,4vw,3rem);background:linear-gradient(90deg,var(--arena),var(--rosa),var(--violeta));-webkit-background-clip:text;background-clip:text;color:transparent!important}
+#template-mo-zay-hero-carousel .h2{color:var(--texto)!important;font-family:'Figtree',sans-serif!important;font-weight:500;font-size:1.3rem}
+.carousel-control-prev i,.carousel-control-next i{color:var(--rosa)!important}
+.carousel-indicators li{background-color:var(--rosa)!important}
+/* categorías: planetas */
+.rounded-circle.img-fluid{width:230px;height:230px;object-fit:cover;object-position:top;border:3px solid var(--violeta)!important;box-shadow:0 0 0 8px rgba(227,98,240,.15),0 0 40px rgba(238,78,33,.4);transition:transform .35s}
+a:hover>.rounded-circle{transform:scale(1.06) rotate(4deg)}
+/* tarjetas de libros */
+.card{background:var(--panel)!important;border:1px solid rgba(227,98,240,.3)!important;border-radius:18px!important;overflow:hidden;color:var(--texto)}
+.card-img,.card-img-top{aspect-ratio:2/3;object-fit:cover;width:100%;background:var(--noche2);border-radius:0!important}
+.product-wap{border-radius:18px!important}
+.product-wap .card-img-overlay{background:linear-gradient(180deg,transparent,rgba(18,6,31,.85))!important}
+.product-wap .card-body{background:var(--panel)}
+.card-body a.h3,.card-body a.h2,.card-body .h3{font-family:'Figtree',sans-serif!important;font-weight:800;font-size:1.1rem;color:var(--texto)!important}
+.card-body .text-muted,.product-wap .list-unstyled li{color:var(--suave)!important}
+.text-warning{color:var(--arena)!important}
+.text-center.mb-0{color:var(--rosa)!important;font-weight:800;font-size:1.15rem}
+.list-unstyled li a.text-decoration-none{color:var(--suave)}
+.list-unstyled li a.text-decoration-none:hover{color:var(--rosa)}
+.shop-top-menu a.h3,.collapsed.h3{font-family:'Unbounded',sans-serif!important;font-size:1rem!important;color:var(--texto)!important}
+.pagination .page-link{background:var(--panel);border:1px solid var(--violeta)!important;color:var(--texto)!important;border-radius:999px;margin:0 3px}
+.pagination .active .page-link,.page-link:hover{background:var(--rosa)!important;color:#1b0630!important}
+.page-link.rounded-0{border-radius:999px!important}
+/* detalle */
+#product-detail,.product-detail{color:var(--texto)}
+.btn-size,.btn-secondary{background:var(--panel)!important;border:1px solid var(--violeta)!important;color:var(--texto)!important}
+/* pie */
+footer{border-top:1px solid rgba(227,98,240,.35);background:rgba(18,6,31,.9)!important}
+footer .logo{color:var(--arena)!important}
+footer .footer-link-list a,footer a{color:var(--suave)}
+footer a:hover{color:var(--rosa)}
+.w-100.bg-black,footer .bg-black{background:#0b0314!important}
+/* sección de valores / about */
+.service-icon,.h-100 .fa{color:var(--violeta)}
+.shadow{box-shadow:0 10px 40px rgba(0,0,0,.45)!important}
+img.img-fluid.rounded{border-radius:18px}
+.banner-img,.img-fluid.mb-4{border-radius:18px}
+section.py-5 img[alt="Libros"]{max-height:260px;width:auto;border-radius:10px;box-shadow:0 20px 50px rgba(0,0,0,.5);transform:rotate(4deg)}
+.services-icon-wap{background:var(--panel)!important;border:1px solid rgba(227,98,240,.3);border-radius:18px}
+.services-icon-wap:hover{background:linear-gradient(135deg,var(--rubi),var(--violeta))!important}
+.services-icon-wap h4{color:var(--texto)!important}
+.text-white{color:#fff!important}.text-white p{color:#fff!important}
+.editorial{display:inline-block;font-family:'Unbounded',sans-serif;font-weight:600;font-size:1.2rem;color:var(--arena);padding:1.6rem 1rem;border:1px solid rgba(227,98,240,.35);border-radius:14px;min-width:150px;text-align:center}
